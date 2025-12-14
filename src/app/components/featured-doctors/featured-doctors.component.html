@@ -1,0 +1,49 @@
+<div class="featured-doctors">
+
+  <!-- Header -->
+  <div class="header">
+    <h4>Featured Doctors</h4>
+    <a class="show-more">Show More</a>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button
+      *ngFor="let s of specialties"
+      (click)="filter(s.id)"
+      [class.active]="activeSpecialty === s.id"
+    >
+      {{ s.name }}
+    </button>
+  </div>
+
+  <!-- Slider -->
+  <swiper-container
+    slides-per-view="auto"
+    space-between="16"
+    navigation="true"
+  >
+    <swiper-slide
+      *ngFor="let doctor of filteredDoctors"
+      class="doctor-slide"
+    >
+      <div class="doctor-card">
+
+        <div class="image-wrapper">
+          <span class="rating">⭐ {{ doctor.rating }}</span>
+          <img [src]="doctor.image" alt="doctor" />
+        </div>
+
+        <h6>{{ doctor.name }}</h6>
+        <p class="specialty">{{ doctor.specialty }}</p>
+
+        <div class="location">
+          <i class="bi bi-geo-alt"></i>
+          {{ doctor.city }}: {{ doctor.area }}
+        </div>
+
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+</div>

@@ -6,6 +6,9 @@
   padding-left: 150px;
   padding-right: 15px;
 } */
+ @import 'swiper/css';
+@import 'swiper/css/navigation';
+
 html, body {
   height: 100%;
   margin: 0;

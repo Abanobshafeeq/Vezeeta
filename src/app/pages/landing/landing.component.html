@@ -1,0 +1,40 @@
+<section class="hero-section">
+  <div class="container text-center text-md-start">
+    <h1>Better Healthcare for a Better Life</h1>
+    <p>
+      Book online or call
+      <i class="bi bi-telephone-fill text-danger"></i>
+      <strong>16676</strong>
+    </p>
+  </div>
+
+  <div class="search-wrapper">
+    <app-booking-header></app-booking-header>
+  </div>
+
+  <div class="scroll-down" (click)="scrollToContent()">
+    <i class="bi bi-chevron-down"></i>
+  </div>
+</section>
+
+<section class="content-gray">
+  <div class="content-gray-container container my-4">
+    <div class="shamel-banner">
+      <div class="banner-content">
+        <div class="text">
+          <img
+            src="./../../../assets/images/shamel.png"
+            alt="shamel"
+            class="img"
+          />
+          <p>Save up to 80% on all medical services</p>
+        </div>
+
+        <button class="details-btn">See Details</button>
+      </div>
+    </div>
+    <div class="featured-doctor">
+      <app-featured-doctors></app-featured-doctors>
+    </div>
+  </div>
+</section>
