@@ -1,0 +1,106 @@
+<!-- Overlay -->
+<div
+  class="mobile-menu-overlay"
+  (click)="toggleMenu()"
+  [class.show]="menuOpen"
+></div>
+
+<!-- Side Menu -->
+<div class="mobile-side-menu" [class.open]="menuOpen">
+  <!-- Close Button -->
+  <div class="close-btn" (click)="toggleMenu()">
+    <i class="bi bi-arrow-right"></i>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="menu-item">
+    <i class="bi bi-house-door"></i>
+    Home Page
+    <span class="red-line"></span>
+  </div>
+
+  <div class="menu-item">
+    <i class="bi bi-person-plus"></i>
+    Join now as a user
+    <span class="red-line"></span>
+  </div>
+
+  <div class="menu-item">
+    <i class="bi bi-briefcase"></i>
+    Vezeeta For Doctors
+    <span class="red-line"></span>
+  </div>
+
+  <div class="menu-item">
+    <i class="bi bi-box-arrow-in-right"></i>
+    Login
+    <span class="red-line"></span>
+  </div>
+
+  <div class="menu-item">
+    <i class="bi bi-telephone"></i>
+    Contact Us
+    <span class="red-line"></span>
+  </div>
+
+  <!-- Bottom Section -->
+  <!-- Bottom Section -->
+  <div class="bottom-section">
+    <!-- Arabic text on the left -->
+    <div class="lang-text">عربي</div>
+
+    <!-- Country selector on the right -->
+    
+    <!-- Dropdown List -->
+      
+    <div class="dropdown" >
+        <a
+          class="dropdown-toggle text-white text-decoration-none fw-semibold d-flex align-items-center gap-2"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img [src]="selectedFlag" class="flag-icon" alt="flag" />
+          {{ selectedCountry }}
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              (click)="changeCountry('Egypt', '../../../assets/images/e.png')"
+            >
+              <img src="../../../assets/images/e.png" class="flag-icon" />
+              Egypt
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              (click)="
+                changeCountry('Saudi Arabia', '../../../assets/images/s.png')
+              "
+            >
+              <img src="../../../assets/images/s.png" class="flag-icon" />
+              Saudi Arabia
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              (click)="changeCountry('Jordan', '../../../assets/images/j.png')"
+            >
+              <img src="../../../assets/images/j.png" class="flag-icon" />
+              Jordan
+            </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>

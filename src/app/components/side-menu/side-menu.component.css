@@ -1,0 +1,131 @@
+/* OVERLAY */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 998;
+}
+
+.mobile-menu-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* SIDE MENU */
+.mobile-side-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #0068b4;
+  padding: 20px 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s ease;
+  color: white;
+}
+
+.mobile-side-menu.open {
+  right: 0;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  font-size: 22px;
+  text-align: right;
+  padding: 0 20px 15px 0;
+  cursor: pointer;
+}
+
+/* MENU ITEMS */
+.menu-item {
+  padding: 18px 20px;
+  font-size: 17px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+/* الخط الأحمر */
+.red-line {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  width: 12px;
+  height: 2px;
+  background: red;
+}
+
+.bottom-section {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* مهم */
+  align-items: center;
+}
+
+/* Arabic text on left */
+.lang-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Country selector on right */
+.country-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+
+.country-box i {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* Dropdown */
+.dropdown {
+  margin-top: 10px;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.dropdown-item:hover {
+  background: rgba(255,255,255,0.25);
+}

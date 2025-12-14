@@ -1,0 +1,66 @@
+.booking-header {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+
+  position: relative;
+}
+
+/* Tabs container */
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  text-align: center;
+  gap: 0;
+}
+
+/* Each tab */
+.tab {
+  padding: 15px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.tab i {
+  font-size: 22px;
+  color: #007bff;
+}
+
+.tab h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tab p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Active Tab styling */
+.tab.active {
+  color: #007bff;
+}
+
+
+.blue-line {
+  height: 3px;
+  width: 50%;             
+  background: #007bff;
+  margin-top: 0;
+  transition: 0.3s ease;
+  transform: translateX(0%);
+}
+
+.blue-line.right {
+  transform: translateX(100%);
+}
