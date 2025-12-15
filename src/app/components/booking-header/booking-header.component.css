@@ -1,7 +1,7 @@
 .booking-header {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  padding:0px 10px 10px 10px ; 
+  border-radius: 20px;
   width: 100%;
   max-width: 1100px;
   margin: auto;
