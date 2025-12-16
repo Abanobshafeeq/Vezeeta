@@ -1,61 +1,49 @@
-.navbar{
-    background-color: rgb(0, 112, 205);
+/* Navbar base */
+.navbar {
+  background-color: var(--mainColor);
+  padding: 0;                 
+  height: 60px;
+  
 }
+
+
+/* Responsive spacing */
+@media screen and  (max-width: 1246px) {
+  .custom-Container{
+    padding-left: 38px !important ;
+    padding-right: 38px !important;
+  }
+}
+
+/* Toggler */
 .navbar-toggler {
-  border: none !important; 
+  border: none;
+  padding: 2px 6px;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
-.custom-nav .navbar-toggler {
-  display: none;
-}
-.custom-nav .navbar-collapse {
-  display: flex !important;
-}
-.btn-signUp{
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    font-size: 13px;
-    vertical-align: middle;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: none;
-   border: 1px solid white;
-    padding: 0px 6px;
-    margin-right: 8px;
-    line-height: 24px;
-    transition: 0.2s ease-in;
-    font-weight: 400 !important;
-    
-}
-.btn-signUp:hover {
-    color: rgb(0, 112, 205) !important;
-    background-color: white;
-}
-.small-nav .nav-link,
-.small-nav a {
-  font-size: 13px !important;
-}
-
-.small-nav .gap-3 {
-  gap: 10px !important;
-}
-
-.small-nav .nav-link {
-  padding: 4px 6px !important;
-}
-
-.small-nav .navbar-toggler {
-  padding: 2px 6px !important;
-  font-size: 12px;
-}
-
-
-.small-nav .navbar-toggler-icon {
   width: 18px;
   height: 18px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='4' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* Text size */
+.small-nav a {
+  font-size: 13px;
+}
+
+/* Sign Up button */
+.btn-signUp {
+  border: 1px solid #fff;
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-signUp:hover {
+  background: #fff;
+  color: rgb(0, 112, 205);
+}

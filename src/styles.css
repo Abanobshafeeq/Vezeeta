@@ -1,16 +1,28 @@
-/* app-root, app-root > * {
-  width: 100%;
-  max-width: 1320px; 
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 150px;
-  padding-right: 15px;
-} */
  @import 'swiper/css';
 @import 'swiper/css/navigation';
+:root{
+  --mainColor:rgb(0, 112, 205) ;
+}
+
+
+.custom-Container{
+  padding-left: 160px;
+  padding-right: 160px;
+  
+}
+
+
+/* Responsive spacing */
+@media screen and  (max-width: 1246px) {
+  .custom-Container{
+    padding-left: 20px !important ;
+    padding-right: 20px !important;
+  }
+}
 
 html, body {
   height: 100%;
+  font-size: 12px;
   margin: 0;
 }
 

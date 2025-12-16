@@ -1,12 +1,10 @@
 .booking-header {
   background: #fff;
   padding:0px 10px 10px 10px ; 
-  border-radius: 20px;
+  border-radius: 22px;
   width: 100%;
-  max-width: 1100px;
-  margin: auto;
-
-  position: relative;
+  /* border: 1px solid rgb(224, 224, 224); */
+  /* box-shadow: rgba(0, 0, 0, 0.29) 0px 6px 18px 0px; */
 }
 
 /* Tabs container */
@@ -30,32 +28,37 @@
 }
 
 .tab i {
-  font-size: 22px;
-  color: #007bff;
+  font-size: 30px;
+  padding-right: 5px !important;
+  
 }
 
 .tab h4 {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
+  text-align: start;
 }
 
 .tab p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
 }
 
 /* Active Tab styling */
 .tab.active {
-  color: #007bff;
+  color: var(--mainColor);
+}
+.tab.active p {
+  color: var(--mainColor);
 }
 
 
 .blue-line {
   height: 3px;
   width: 50%;             
-  background: #007bff;
+  background: var(--mainColor);
   margin-top: 0;
   transition: 0.3s ease;
   transform: translateX(0%);
@@ -63,4 +66,12 @@
 
 .blue-line.right {
   transform: translateX(100%);
+}
+
+@media screen and (max-width : 1017px) {
+  .tab h4{
+    font-size: 18px;
+  }
+  
+  
 }

@@ -1,15 +1,23 @@
-<section class="hero-section">
-  <div class="container text-center text-md-start">
-    <h1>Better Healthcare for a Better Life</h1>
-    <p>
-      Book online or call
-      <i class="bi bi-telephone-fill text-danger"></i>
-      <strong>16676</strong>
-    </p>
-  </div>
+<section class="hero-section custom-Container">
+  <div class="custom-Container">
+    <!-- padding-top: 55px; -->
+    <div class="row" >
+      <div class="container  text-start content-header">
+        <h1>Better Healthcare for a Better Life</h1>
+        <h2>
+          Book online or call
+          <i class="bi bi-telephone-fill text-danger"></i>
+          <span>16676</span>
+        </h2>
+      </div>
+    </div>
 
-  <div class="search-wrapper">
-    <app-booking-header></app-booking-header>
+    <div class="row">
+      <div class="app-booking-header">
+        <app-booking-header></app-booking-header>
+        <app-header-doctors-responsive></app-header-doctors-responsive>
+      </div>
+    </div>
   </div>
 
   <div class="scroll-down" (click)="scrollToContent()">

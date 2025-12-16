@@ -1,24 +1,22 @@
 <div class="booking-header shadow-sm">
-
   <!-- Tabs -->
   <div class="tabs w-100">
-
     <!-- Tab 1 -->
-    <div 
-      class="tab" 
+    <div
+      class="tab"
       [class.active]="activeTab === 'doctor'"
       (click)="setActive('doctor')"
     >
       <i class="bi bi-calendar-plus"></i>
-      <div>
-        <h4>Book a doctor</h4>
-        <p>Examination or procedure</p>
-      </div>
+          <div>
+            <h4>Book a doctor</h4>
+            <p>Examination or procedure</p>
+          </div>
     </div>
 
     <!-- Tab 2 -->
-    <div 
-      class="tab" 
+    <div
+      class="tab"
       [class.active]="activeTab === 'telehealth'"
       (click)="setActive('telehealth')"
     >
@@ -28,7 +26,6 @@
         <p>Call consultation with doctor</p>
       </div>
     </div>
-
   </div>
 
   <!-- Blue Line -->
@@ -36,8 +33,7 @@
 
   <div class="mt-3">
     @if (activeTab === 'doctor') {
-      <app-header-doctors></app-header-doctors>
+    <app-header-doctors></app-header-doctors>
     }
   </div>
-
 </div>
