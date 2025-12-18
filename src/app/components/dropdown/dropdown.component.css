@@ -1,0 +1,157 @@
+/* =========================
+   POPUP BOX (outer)
+========================= */
+.menu-box {
+  width: 620px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.menu-box > .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: grid !important;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: stretch;
+}
+
+/* Cancel bootstrap col behavior inside our box */
+.menu-box > .row > .col {
+  padding: 0 !important;
+  max-width: none !important;
+  flex: initial !important;
+}
+
+/* =========================
+   NAV (left/right arrows)
+========================= */
+.menu-box .nav-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 0px !important;
+}
+
+.menu-box .nav-btn {
+  width: 34px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(193, 193, 193);
+  background: #fff;
+  color: var(--mainColor);
+  border-radius: 2px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-box .nav-btn i {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.menu-box .nav-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================
+   CENTER CONTENT (titles + lists)
+========================= */
+.menu-box .menu-content {
+  width: 100%;
+}
+
+/* titles row (desktop) */
+.menu-box .titles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  padding: 10px 0px 0px 0px;
+  color: #747470;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* desktop lists wrapper */
+.desktop-lists {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 24px;
+}
+
+.left,
+.right {
+  padding: 10px 0px 0px 0px;
+}
+
+.menu-box .item {
+  display: block;
+  padding: 6px 0;
+  color: var(--mainColor);
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1.25;
+  white-space: normal;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.menu-box .item:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+.menu-box .menu-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 12px;
+  color: #747470;
+  font-size: 10px;
+}
+
+/* ===== helpers ===== */
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
+/* =========================
+   Mobile (no pages, no arrows)
+========================= */
+@media screen and (max-width: 950px) {
+  .menu-box {
+    width: fit-content;
+    max-height: 70vh; 
+    overflow-y: scroll;   
+  }
+
+  /* hide desktop stuff */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* show mobile list */
+  .mobile-only {
+    display: block !important;
+  }
+
+  /* collapse grid to single column (no nav columns) */
+  .menu-box > .row {
+    grid-template-columns: 1fr;
+  }
+
+  /* mobile list spacing */
+  .menu-box .list.one {
+    padding: 10px 12px;
+  }
+
+  .menu-box .item {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,87 @@
+.booking-card {
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 15px ;
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  background: rgb(229, 241, 255);
+}
+
+/* Single tab */
+.tab {
+  flex: 1;
+  padding: 8px 0px;
+  cursor: pointer;
+  color: var(--mainColor);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+/* Icon */
+.tab i {
+  font-size: 14px;
+}
+
+.bi-search{
+  font-size: 14px;
+  padding-left: 10px;
+}
+/* Active tab */
+.tab.active {
+  background: var(--mainColor);
+  color: #fff;
+}
+
+/* Content area */
+.content {
+  
+  background-color: white;
+  border: 3px solid var(--mainColor);
+  border-radius: 0px 0px 5px 5px;
+
+}
+
+/* Input style */
+.form-control {
+  border: none;
+  display: block;
+  color: rgb(111, 112, 114);
+  padding: 16px;
+  background-color: white;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  
+}
+
+/* Separator line between inputs */
+.form-control + .form-control {
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Remove bootstrap focus */
+.form-control:focus {
+  box-shadow: none;
+}
+
+button{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    background-color: rgb(239, 15, 15);
+    padding: 17px 0px;
+}

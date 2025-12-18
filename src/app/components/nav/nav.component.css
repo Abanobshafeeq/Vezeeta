@@ -8,10 +8,17 @@
 
 
 /* Responsive spacing */
-@media screen and  (max-width: 1246px) {
+@media screen and  (max-width: 1246px) and (min-width : 736px) {
   .custom-Container{
     padding-left: 38px !important ;
     padding-right: 38px !important;
+  }
+}
+
+@media screen and  (max-width: 735px) {
+  .custom-Container{
+    padding-left: 13px !important ;
+    padding-right: 13px !important;
   }
 }
 

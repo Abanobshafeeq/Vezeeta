@@ -1,8 +1,8 @@
-<section class="hero-section custom-Container">
+<section class="doctor-section custom-Container">
   <div class="custom-Container">
     <!-- padding-top: 55px; -->
-    <div class="row" >
-      <div class="container  text-start content-header">
+    <div class="row">
+      <div class="container text-start content-header">
         <h1>Better Healthcare for a Better Life</h1>
         <h2>
           Book online or call
@@ -15,7 +15,14 @@
     <div class="row">
       <div class="app-booking-header">
         <app-booking-header></app-booking-header>
+      </div>
+    </div>
+    <div class="row">
+      <div class="app-booking-header-responsive">
         <app-header-doctors-responsive></app-header-doctors-responsive>
+        <div class="calling">
+          <p>Or Call <span>16676</span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -39,10 +46,27 @@
         </div>
 
         <button class="details-btn">See Details</button>
+
+        <i class="fa-solid fa-chevron-right btn-arrow"></i>
       </div>
     </div>
     <div class="featured-doctor">
       <app-featured-doctors></app-featured-doctors>
+    </div>
+    <div class="book-now">
+      <a routerLink="/home"
+        ><img
+          src="../../../assets/images/book-now.png"
+          alt=""
+          class="book-now-image"
+      /></a>
+    </div>
+    <div class="north">
+      <app-north></app-north>
+    </div>
+
+    <div class="ask-now">
+      <app-ask-now></app-ask-now>
     </div>
   </div>
 </section>

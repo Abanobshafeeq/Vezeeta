@@ -1,0 +1,79 @@
+<div class="container menu-box">
+  <div class="row">
+    <!-- Left nav (desktop only) -->
+    <div class="nav-col desktop-only" (click)="$event.stopPropagation()">
+      <button
+        class="nav-btn"
+        type="button"
+        (click)="prev()"
+        [disabled]="currentPageIndex === 0"
+        aria-label="Prev"
+      >
+        <i class="bi bi-chevron-left"></i>
+      </button>
+    </div>
+
+    <div class="content-col">
+      <div class="menu-content">
+        <!-- Titles (desktop only + first page only) -->
+        <div class="titles desktop-only" *ngIf="currentPageIndex === 0">
+          <div class="title">{{ leftTitle }}</div>
+          <div class="title">{{ rightTitle }}</div>
+        </div>
+
+        <!-- Desktop lists (paged) -->
+        <div class="desktop-only desktop-lists">
+          <div class="list left">
+            <a
+              class="item"
+              *ngFor="let s of pages[currentPageIndex]?.mostPopular"
+              href="#"
+              (click)="selectItem($event, s)"
+              >{{ s }}</a
+            >
+          </div>
+
+          <div class="list right">
+            <a
+              class="item"
+              *ngFor="let s of pages[currentPageIndex]?.otherSpecialties"
+              href="#"
+              (click)="selectItem($event, s)"
+              >{{ s }}</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile list (ALL items, no pages) -->
+        <div class="mobile-only">
+          <div class="list one">
+            <a
+              class="item"
+              *ngFor="let s of allItems"
+              href="#"
+              (click)="selectItem($event, s)"
+              >{{ s }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right nav (desktop only) -->
+    <div class="nav-col desktop-only" (click)="$event.stopPropagation()">
+      <button
+        class="nav-btn"
+        type="button"
+        (click)="next()"
+        [disabled]="currentPageIndex === pages.length - 1"
+        aria-label="Next"
+      >
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="menu-footer desktop-only">
+    <span>Page {{ currentPageIndex + 1 }} / {{ pages.length }}</span>
+  </div>
+</div>

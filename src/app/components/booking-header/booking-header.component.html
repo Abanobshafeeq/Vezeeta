@@ -8,10 +8,10 @@
       (click)="setActive('doctor')"
     >
       <i class="bi bi-calendar-plus"></i>
-          <div>
-            <h4>Book a doctor</h4>
-            <p>Examination or procedure</p>
-          </div>
+      <div>
+        <h4>Book a doctor</h4>
+        <p>Examination or procedure</p>
+      </div>
     </div>
 
     <!-- Tab 2 -->
@@ -34,6 +34,33 @@
   <div class="mt-3">
     @if (activeTab === 'doctor') {
     <app-header-doctors></app-header-doctors>
+    } @else {
+    <div class="search-container shadow-sm">
+      <div class="row g-0">
+        <!-- Specialty -->
+        <div
+          class="col-md border-end px-2 py-1 d-flex align-items-center gap-3"
+        >
+          <!-- <i class="bi bi-stethoscope icon-blue"></i> -->
+
+          <div>
+            <label class="label">Select a specialty</label>
+            <div class="value">
+              <i class="fa-solid fa-stethoscope icon-blue"></i> Choose specialty
+            </div>
+          </div>
+          <i class="bi bi-chevron-down ms-auto text-muted"></i>
+        </div>
+
+        <!-- Search Button -->
+        <div class="col-md-4">
+          <button class="search-btn w-100 h-100">
+            <i class="bi bi-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+
     }
   </div>
 </div>

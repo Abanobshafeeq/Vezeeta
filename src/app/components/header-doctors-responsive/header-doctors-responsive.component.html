@@ -1,1 +1,66 @@
-<p>header-doctors-responsive works!</p>
+<div class="booking-card shadow">
+  <!-- Tabs -->
+  <div class="tabs d-flex text-center">
+    <div
+      class="tab"
+      [class.active]="activeTab === 'clinic'"
+      (click)="setTab('clinic')"
+    >
+      <i class="bi bi-building"></i>
+      <span>Clinic Visit</span>
+    </div>
+
+    <div
+      class="tab"
+      [class.active]="activeTab === 'medicine'"
+      (click)="setTab('medicine')"
+    >
+      <i class="bi bi-capsule"></i>
+      <span>Order Medicine</span>
+    </div>
+
+    <div
+      class="tab"
+      [class.active]="activeTab === 'call'"
+      (click)="setTab('call')"
+    >
+      <i class="bi bi-telephone"></i>
+      <span>Doctor Call</span>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+<div class="content">
+  <!-- Clinic -->
+  <div *ngIf="activeTab === 'clinic'">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search for specialty, doctor or hospital"
+    />
+    <input type="text" class="form-control" placeholder="Choose the area" />
+  </div>
+
+  <!-- Medicine -->
+  <div *ngIf="activeTab === 'medicine'" class="d-flex align-items-center ">
+    <i class="bi bi-search text-muted "></i>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search for a product"
+    />
+  </div>
+
+  <!-- Call -->
+  <div *ngIf="activeTab === 'call'">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search for specialty, doctor, or clinic"
+    />
+  </div>
+</div>
+
+<div class="btn-doctors" *ngIf="activeTab === 'clinic' || activeTab === 'call'">
+  <button class="w-100">Browse Doctors</button>
+</div>

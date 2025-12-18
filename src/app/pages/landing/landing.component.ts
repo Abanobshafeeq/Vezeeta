@@ -4,11 +4,14 @@ import { FeaturedDoctorsComponent } from "../../components/featured-doctors/feat
 import {
   HeaderDoctorsResponsiveComponent
 } from "../../components/header-doctors-responsive/header-doctors-responsive.component";
+import { RouterLink } from "@angular/router";
+import { NorthComponent } from "../../components/north/north.component";
+import { AskNowComponent } from "../../components/ask-now/ask-now.component";
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [BookingHeaderComponent, FeaturedDoctorsComponent, HeaderDoctorsResponsiveComponent],
+  imports: [BookingHeaderComponent, FeaturedDoctorsComponent, HeaderDoctorsResponsiveComponent, RouterLink, NorthComponent, AskNowComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
