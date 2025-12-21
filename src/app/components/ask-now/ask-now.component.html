@@ -1,17 +1,41 @@
-<div class="bg-white shadow-sm c-container">
+<div
+  class="shadow-sm c-container"
+  [ngClass]="variant === 'blue' ? 'card-blue' : 'card-light'"
+  [ngStyle]="data.bgImageSrc ? {'background-image': 'url(' + data.bgImageSrc + ')'} : null"
+>
   <div class="row g-3">
-    <div class="col-12">
-      <h4 class="mb-2 text-muted">Have a Medical Question?</h4>
-      <div class="text">
-        Submit your medical question and receive an answer from a specialized doctor
+    <!-- icon -->
+    <div
+      class="col-auto align-items-start"
+      [ngClass]="data.showIconMobileOnly ? 'd-md-none' : ''"
+      *ngIf="data.iconSrc"
+    >
+      <div class="icon-wrap">
+        <img [src]="data.iconSrc" alt="" />
+      </div>
+    </div>
+
+    <!-- text -->
+    <div class="col">
+      <h4 class="mb-2" [ngClass]="variant === 'blue' ? 'title-blue' : 'title-light'">
+        {{ data.title }}
+      </h4>
+      <div [ngClass]="variant === 'blue' ? 'text-blue' : 'text-light'">
+        {{ data.description }}
       </div>
     </div>
 
     <div class="w-100"></div>
 
+    <!-- button -->
     <div class="col-12">
-      <a class="btn ask-btn px-4 py-3" href="#">
-        Ask now
+      <a
+        class="btn px-4 py-3 w-100"
+        [ngClass]="variant === 'blue' ? 'btn-white' : 'ask-btn'"
+        [href]="data.buttonLink || '#'"
+        (click)="onCtaClick($event)"
+      >
+        {{ data.buttonText }}
       </a>
     </div>
   </div>
