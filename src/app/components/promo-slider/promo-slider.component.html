@@ -1,0 +1,57 @@
+<section class="promo-section">
+  <header class="promo-header" *ngIf="sectionTitle || sectionLinkHref">
+    <h2 class="promo-title">{{ sectionTitle }}</h2>
+
+    <a *ngIf="sectionLinkHref" class="promo-all" [routerLink]="sectionLinkHref">
+      {{ sectionLinkText }}
+      <i
+        class="bi bi-caret-right-fill red-arrow"
+        *ngIf="showRightArrow"
+      ></i>
+    </a>
+  </header>
+
+  <div class="promo-wrap">
+    <button
+      class="nav-btn left"
+      type="button"
+      (click)="scroll(-1)"
+      aria-label="Prev"
+    >
+      <span class="chevron chevron-left" ></span>
+    </button>
+
+    <div #track class="promo-track">
+      <a
+        class="promo-card"
+        *ngFor="let it of items"
+        [routerLink]="it.link || null"
+      >
+        <div class="img-box">
+          <img class="img" [src]="it.imageSrc" [alt]="it.title" />
+          <span class="badge" *ngIf="it.badgeText">{{ it.badgeText }}</span>
+        </div>
+
+        <div class="body">
+          <div class="card-title">{{ it.title }}</div>
+
+          <div class="prices" *ngIf="it.oldPrice || it.newPrice">
+            <span class="old" *ngIf="it.oldPrice">{{ it.oldPrice }}</span>
+            <span class="new" *ngIf="it.newPrice">{{ it.newPrice }}</span>
+          </div>
+
+          <div class="sub2" *ngIf="it.offersText">{{ it.offersText }}</div>
+        </div>
+      </a>
+    </div>
+
+    <button
+      class="nav-btn right"
+      type="button"
+      (click)="scroll(1)"
+      aria-label="Next"
+    >
+      <span class="chevron chevron-right" ></span>
+    </button>
+  </div>
+</section>

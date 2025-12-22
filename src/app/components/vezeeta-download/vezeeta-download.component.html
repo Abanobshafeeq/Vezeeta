@@ -1,0 +1,47 @@
+<section class="features">
+  <div class="feature" *ngFor="let item of features">
+    <div class="icon">
+      <i [class]="item.icon"></i>
+    </div>
+
+    <div class="feature-text">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.text }}</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="download">
+  <div class="download-inner">
+    <div class="download-left">
+      <h2>Download Vezeeta Application</h2>
+      <p>
+        Search, compare and book doctor consultations with ease. Order your
+        medicines &amp; get them delivered within 60 minutes. Track your steps
+        count &amp; earn points on hitting the daily goal.
+      </p>
+
+      <div class="stores">
+        <button class="store-btn app-store">
+          <img src="../../../assets/images/apple.png" alt="" />
+          <span>App Store</span>
+        </button>
+
+        <button class="store-btn google-play">
+          <img src="../../../assets/images/play-store.png" alt="" />
+          <span>Google Play</span>
+        </button>
+
+        <button class="store-btn app-gallery">
+          <img src="../../../assets/images/AppGallery.png" alt="" />
+          <span>App Gallery</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="download-right">
+      <img src="../../../assets/images/vaezeeta-app.png" alt="Vezeeta app" />
+    </div>
+  </div>
+</section>

@@ -33,7 +33,7 @@
 </section>
 
 <section class="content-gray">
-  <div class="content-gray-container container my-4">
+  <div class="content-container container my-4">
     <div class="shamel-banner">
       <div class="banner-content">
         <div class="text">
@@ -75,4 +75,33 @@
       <app-service-card></app-service-card>
     </div>
   </div>
+</section>
+
+<section class="content-white">
+  <div class="content-container container my-4">
+    <app-promo-slider
+      sectionTitle="Choose from top offers"
+      sectionLinkText="All Offers"
+      sectionLinkHref="/offers"
+      [items]="topOffers"
+    ></app-promo-slider>
+  </div>
+</section>
+
+<section class="content-gray">
+  <div class="content-container container my-4">
+    <app-promo-slider
+      sectionTitle="Book from top specialties"
+      sectionLinkText=""
+      sectionLinkHref="/"
+      [items]="bookSpecialties"
+      [hideArrow]="true"
+    ></app-promo-slider>
+  </div>
+</section>
+
+<section class="content-white">
+   <div class="content-container container my-4">
+    <app-vezeeta-download></app-vezeeta-download>
+   </div>
 </section>
