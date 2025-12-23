@@ -18,6 +18,8 @@ import {
 import { TOP_OFFERS } from '../../data/offers.data';
 import { Book_Specialties } from '../../data/bookSpecialties.data';
 import { VezeetaDownloadComponent } from '../../components/vezeeta-download/vezeeta-download.component';
+import { TopListsComponent } from "../../components/top-lists/top-lists.component";
+
 // import { VezeetaDownloadComponent } from "../../components/vezeeta-download/vezeeta-download.component";
 
 @Component({
@@ -33,6 +35,7 @@ import { VezeetaDownloadComponent } from '../../components/vezeeta-download/veze
     ServiceCardComponent,
     PromoSliderComponent,
     VezeetaDownloadComponent,
+      TopListsComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',

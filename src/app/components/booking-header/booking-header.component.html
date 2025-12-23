@@ -35,27 +35,67 @@
     @if (activeTab === 'doctor') {
     <app-header-doctors></app-header-doctors>
     } @else {
-    <div class="search-container shadow-sm">
+    
+   
+    <div class="search-container shadow-sm" (click)="toggleDropdown($event)">
       <div class="row g-0">
         <!-- Specialty -->
         <div
-          class="col-md border-end px-2 py-1 d-flex align-items-center gap-3"
+          class="col-md border-end px-3 py-3 d-flex align-items-center gap-3 specialty-wrap"
         >
-          <!-- <i class="bi bi-stethoscope icon-blue"></i> -->
-
           <div>
             <label class="label">Select a specialty</label>
             <div class="value">
-              <i class="fa-solid fa-stethoscope icon-blue"></i> Choose specialty
+              <i class="fa-solid fa-stethoscope icon-blue"></i>
+              {{ selectedSpecialty || "Choose specialty" }}
             </div>
           </div>
+
+          @if(activeTab2 === 'open-specialty'){
+          <i class="bi bi-chevron-up ms-auto text-muted"></i>
+          <div class="specialty-dropdown">
+            <app-dropdown
+              [pages]="pages"
+              leftTitle="Most popular"
+              rightTitle="Other cities"
+              (itemSelected)="onSpecialtySelected($event)"
+            ></app-dropdown>
+          </div>
+
+          }@else {
           <i class="bi bi-chevron-down ms-auto text-muted"></i>
+          }
         </div>
 
         <!-- Search Button -->
         <div class="col-md-4">
-          <button class="search-btn w-100 h-100">
-            <i class="bi bi-search"></i> Search
+                <button
+                  class="search-btn w-100 h-100"
+                  type="button"
+                  [disabled]="isLoading"
+                  (click)="onSearch($event)"
+                >
+                @if(!isLoading){
+                  <i class="bi bi-search"></i>
+                  <span class="ms-1">Search</span>
+                } @else {
+                  <svg class="spinner-ios" viewBox="0 0 50 50" aria-hidden="true">
+                    <g>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity="1"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".9"  transform="rotate(30 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".8"  transform="rotate(60 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".7"  transform="rotate(90 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".6"  transform="rotate(120 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".5"  transform="rotate(150 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".4"  transform="rotate(180 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".3"  transform="rotate(210 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".25" transform="rotate(240 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".2"  transform="rotate(270 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".15" transform="rotate(300 25 25)"></rect>
+                      <rect x="23" y="2" width="4" height="15" rx="8" fill="#fff" opacity=".1"  transform="rotate(330 25 25)"></rect>
+                    </g>
+                  </svg>
+                }
           </button>
         </div>
       </div>

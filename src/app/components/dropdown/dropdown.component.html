@@ -1,7 +1,7 @@
-<div class="container menu-box">
+<div class="menu-box">
   <div class="row">
     <!-- Left nav (desktop only) -->
-    <div class="nav-col desktop-only" (click)="$event.stopPropagation()">
+    <div class="col nav-col desktop-only" (click)="$event.stopPropagation()">
       <button
         class="nav-btn"
         type="button"
@@ -13,7 +13,8 @@
       </button>
     </div>
 
-    <div class="content-col">
+    <!-- Center content -->
+    <div class="col content-col">
       <div class="menu-content">
         <!-- Titles (desktop only + first page only) -->
         <div class="titles desktop-only" *ngIf="currentPageIndex === 0">
@@ -60,7 +61,7 @@
     </div>
 
     <!-- Right nav (desktop only) -->
-    <div class="nav-col desktop-only" (click)="$event.stopPropagation()">
+    <div class="col nav-col desktop-only" (click)="$event.stopPropagation()">
       <button
         class="nav-btn"
         type="button"

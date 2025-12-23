@@ -2,8 +2,7 @@
   height: 95vh;
   background: url("../../../assets/images/slider/1.png") center/cover no-repeat;
   position: relative;
-  padding: 35px 15px;
-  /* max-width: 1200px; */
+  padding: 55px 0px 0px;
   margin: 0 auto;
 }
 
@@ -86,17 +85,17 @@ h2 span {
 }
 
 .content-container {
-  width: 70%;
+  width: 73%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 56px;
+  padding-bottom: 20px;
 }
 
 .shamel-banner {
-  position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 8px;
+  gap: 8px;
   padding: 16px;
   background-color: var(--mainColor);
   background-image: url('../../../assets/shamel-background.png');
@@ -117,7 +116,8 @@ h2 span {
 
 .text img {
   margin-bottom: 5px;
-  width: 140px;
+  width: 124px;
+  height: 24px;
 }
 
 .text p {
@@ -162,16 +162,17 @@ h2 span {
 }
 
 .content-slider-container {
-  width: 70%;
   /* max-width: 1300px; */
-  margin: 0 auto;
+  
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
 .content-white{
   background-color: white;
-  padding: 10px;
+    padding: 10px;
+
+ 
 }
 @media screen and (max-width: 1062px) {
   .content-container{

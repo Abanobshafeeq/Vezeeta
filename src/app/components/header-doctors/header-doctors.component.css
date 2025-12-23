@@ -24,7 +24,7 @@
   font-weight: 500;
 }
 
-.name-input:focus::placeholder{
+.name-input:focus::placeholder {
   color: transparent !important;
 }
 
@@ -72,22 +72,25 @@
   to { transform: rotate(360deg); }
 } */
 
-.spinner-ios{
+.spinner-ios {
   height: 35px;
-  width: 35PX;
+  width: 35px;
   display: inline-block;
   vertical-align: middle;
-  animation: spin .9s linear infinite;
+  animation: spin 0.9s linear infinite;
   font-size: 30px;
 }
 
-@keyframes spin{
-  to { transform: rotate(360deg); }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 
 .specialty-wrap {
   position: relative;
+    padding: 6px 16px 4px;
+ 
 }
 
 .specialty-dropdown {
@@ -101,7 +104,7 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
   z-index: 9999;
 }
-.all-area{
+.all-area {
   width: 200px;
   padding: 6px;
   color: var(--mainColor);
@@ -134,8 +137,16 @@
   .search-container .search-btn {
     font-size: 18px;
   }
-  .search-container .value {
-    font-size: 12px;
+  .label {
+    font-size: 11px;
+    line-height: 20px;
+    padding-right: 0px;
+  }
+  .name-input::placeholder {
+    font-size: 12px !important;
+  }
+  .value {
+    font-size: 12px !important;
   }
   .search-container .icon-blue {
     font-size: 15px;

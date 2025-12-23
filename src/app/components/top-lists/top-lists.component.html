@@ -1,0 +1,33 @@
+<section class="">
+  <div class="row ">
+    <div class="col-lg-6 col-sm-12   mb-lg-0">
+      <h3 class="h6 fw-bold">
+        Choose and book from top specialties
+      </h3>
+
+      <div class="d-flex flex-wrap ">
+        <button
+          class="btn border-0 shadow-sm small"
+          *ngFor="let s of specialties"
+        >
+          {{ s }}
+        </button>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-sm-12 col-sm-12">
+      <h3 class="h6 fw-bold mb-3">
+        Choose and book from top cities
+      </h3>
+
+      <div class="d-flex flex-wrap">
+        <button
+          class="btn  border-0 shadow-sm small"
+          *ngFor="let c of cities"
+        >
+          {{ c }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

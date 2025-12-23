@@ -5,13 +5,18 @@
   height: 60px;
   
 }
+a{
+  font-size: 13px;
+  font-weight: 400 !important;
+  color: #ffffff;
+}
 
 
 /* Responsive spacing */
 @media screen and  (max-width: 1246px) and (min-width : 736px) {
   .custom-Container{
-    padding-left: 38px !important ;
-    padding-right: 38px !important;
+    padding-left: 25px !important ;
+    padding-right: 25px !important;
   }
 }
 
