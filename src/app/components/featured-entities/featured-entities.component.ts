@@ -1,6 +1,7 @@
-import { Component , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FEATURED_ENTITIES, Entity } from '../../data/entitiy.data';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FEATURED_ENTITIES, Entity } from '../../data/entitiy.data';
+
 @Component({
   selector: 'app-featured-entities',
   standalone: true,
@@ -9,7 +10,50 @@ import { CommonModule } from '@angular/common';
   templateUrl: './featured-entities.component.html',
   styleUrl: './featured-entities.component.css',
 })
-export class FeaturedEntitiesComponent {
-    entities: Entity[] = FEATURED_ENTITIES;
+export class FeaturedEntitiesComponent implements AfterViewInit {
+  entities: Entity[] = FEATURED_ENTITIES;
 
+  @ViewChild('swiperEl', { static: true }) swiperEl!: ElementRef;
+
+  swiperConfig = {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    loopFillGroupWithBlank: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+        slidesPerGroup: 1,
+        spaceBetween: 12,
+      },
+      480: {
+        slidesPerView: 1.6,
+        slidesPerGroup: 1,
+        spaceBetween: 12,
+      },
+      640: {
+        slidesPerView: 2.2,
+        slidesPerGroup: 2,
+        spaceBetween: 14,
+      },
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 16,
+      },
+    },
+  };
+
+  ngAfterViewInit(): void {
+    Object.assign(this.swiperEl.nativeElement, this.swiperConfig);
+    this.swiperEl.nativeElement.initialize();
+  }
 }

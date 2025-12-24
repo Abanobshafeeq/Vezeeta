@@ -11,32 +11,97 @@ export const FEATURED_ENTITIES: Entity[] = [
   {
     id: 1,
     name: 'Z Care For Psychiatry',
-    image: 'assets/images/entities/z-care-cover.jpg',
-    logo: 'assets/images/entities/z-care-logo.png',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
     specialtiesCount: 4,
     location: 'Hadayek El-Ahram'
   },
   {
     id: 2,
     name: 'Aura Dental Care',
-    image: 'assets/images/entities/aura-cover.jpg',
-    logo: 'assets/images/entities/aura-logo.png',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
     specialtiesCount: 1,
     location: 'Suez City, New Cairo'
   },
   {
     id: 3,
     name: 'BARAKA MEDICAL',
-    image: 'assets/images/entities/baraka-cover.jpg',
-    logo: 'assets/images/entities/baraka-logo.png',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
     specialtiesCount: 15,
     location: 'El-Shorouk, 10th of Ramadan'
   },
   {
     id: 4,
     name: 'Shiny White Centers',
-    image: 'assets/images/entities/shiny-cover.jpg',
-    logo: 'assets/images/entities/shiny-logo.png',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  }
+  ,
+  {
+    id: 5,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 6,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 7,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 8,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 9,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 10,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 11,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
+    specialtiesCount: 1,
+    location: 'North Coast, Madinaty'
+  },
+  {
+    id: 12,
+    name: 'Shiny White Centers',
+    image: '../../assets/images/entity/36056455-0d18-4b8f-8caa-dc99c8ed6402-20250316130925.jpg',
+    logo: '../../assets/images/entity/baraka-medical_20240207181002692.jpg',
     specialtiesCount: 1,
     location: 'North Coast, Madinaty'
   }
