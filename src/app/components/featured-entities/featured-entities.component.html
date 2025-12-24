@@ -1,1 +1,50 @@
-<p>featured-entities works!</p>
+<div class="featured-entities">
+  <div class="header">
+    <h2>Featured Entities</h2>
+    <a class="show-more">Show More</a>
+  </div>
+
+  <swiper-container
+    class="entities-swiper"
+    loop="true"
+    autoplay="true"
+    autoplay-delay="2500"
+    speed="600"
+    slides-per-view="auto"
+    space-between="16"
+  >
+    <swiper-slide *ngFor="let entity of entities">
+      <div class="entity-card">
+
+        <!-- Cover image -->
+        <div class="image-wrapper">
+          <img [src]="entity.image" alt="entity" />
+        </div>
+
+        <!-- Card content -->
+        <div class="content">
+          <div class="entity-title">
+            <img
+              *ngIf="entity.logo"
+              class="logo"
+              [src]="entity.logo"
+              alt="logo"
+            />
+            <h6>{{ entity.name }}</h6>
+          </div>
+
+          <p class="specialties">
+            <i class="bi bi-heart-pulse"></i>
+            {{ entity.specialtiesCount }} Specialties
+          </p>
+
+          <div class="location">
+            <i class="bi bi-geo-alt"></i>
+            <span>{{ entity.location }}</span>
+          </div>
+        </div>
+
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>

@@ -19,6 +19,7 @@ import { TOP_OFFERS } from '../../data/offers.data';
 import { Book_Specialties } from '../../data/bookSpecialties.data';
 import { VezeetaDownloadComponent } from '../../components/vezeeta-download/vezeeta-download.component';
 import { TopListsComponent } from "../../components/top-lists/top-lists.component";
+import { FeaturedEntitiesComponent } from "../../components/featured-entities/featured-entities.component";
 
 // import { VezeetaDownloadComponent } from "../../components/vezeeta-download/vezeeta-download.component";
 
@@ -26,7 +27,7 @@ import { TopListsComponent } from "../../components/top-lists/top-lists.componen
   selector: 'app-landing',
   standalone: true,
   imports: [
-  BookingHeaderComponent,
+    BookingHeaderComponent,
     FeaturedDoctorsComponent,
     HeaderDoctorsResponsiveComponent,
     RouterLink,
@@ -35,7 +36,8 @@ import { TopListsComponent } from "../../components/top-lists/top-lists.componen
     ServiceCardComponent,
     PromoSliderComponent,
     VezeetaDownloadComponent,
-      TopListsComponent
+    TopListsComponent,
+    FeaturedEntitiesComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',

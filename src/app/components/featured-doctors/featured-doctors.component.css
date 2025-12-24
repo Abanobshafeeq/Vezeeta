@@ -1,29 +1,34 @@
 .featured-doctors {
-  background: #f6f7f9;
-  padding: 24px;
-  border-radius: 12px;
+  background-color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  height: 595px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin: 0px 0px 16px;
 }
 
-.header h4 {
-  margin: 0;
-  font-weight: 600;
+.header h2 {
+  color: rgb(102, 102, 102);
+  font-size: 20px;
+  margin: 16.6px 0px;
+  font-weight: bold;
 }
 
 .header .show-more {
-  color: rgb(0, 115, 205);
-  font-weight: 500;
-  cursor: pointer;
+  color: rgb(0, 112, 205);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-/* Tabs */
 .tabs {
   display: flex;
   gap: 12px;
@@ -32,59 +37,45 @@
 }
 
 .tabs button {
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: #eee;
+  background-color: #f1f4f6;
+  color: #484848;
+  padding: 10px;
   cursor: pointer;
-  white-space: nowrap;
+  border-radius: 8px;
+  text-wrap: nowrap;
+  font-size: 13.3333px !important;
+  font-weight: 500;
+  border: 1px solid rgb(241, 244, 246);
 }
 
 .tabs button.active {
-  background: rgb(0, 115, 205);
-  color: #fff;
+  background: rgb(229, 241, 255);
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
 }
 
-/* Swiper slide */
-.doctor-slide {
-  width: 230px; 
-}
+/* --------- doctor card ---------- */
 
-/* Card */
 .doctor-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 12px;
-  height: 100%;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.doctor-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.doctor-card h6 {
-  margin: 10px 0 4px;
-  font-weight: 600;
-}
-
-.doctor-card .specialty {
-  color: #6c757d;
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-
-.doctor-card .location {
-  font-size: 13px;
-  color: #6c757d;
+  min-height: 204px;
+  min-width: 128px;
+  max-width: 148px;
   display: flex;
-  align-items: center;
-  gap: 4px;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 5px;
+  box-sizing: border-box;
+  gap: 8px !important;
+  overflow: hidden !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  margin-bottom: 3px;
+  margin-right: 0px;
 }
 
-/* Image */
 .image-wrapper {
   position: relative;
   border-radius: 10px;
@@ -93,8 +84,8 @@
 
 .image-wrapper img {
   width: 100%;
-  height: 160px;
-  /* object-fit: ; */
+  height: 120px;
+  object-fit: fill;
 }
 
 .image-wrapper .rating {
@@ -102,10 +93,91 @@
   top: 8px;
   left: 8px;
   background: rgb(0, 115, 205);
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 6px;
+  color: #ffffff;
+  padding: 0px 6px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 40px;
 }
 
+.image-wrapper .rating i {
+  color: #f5a623;
+  font-size: 16px;
+}
+
+.doctor-card h6 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0px;
+  color: rgb(72, 72, 72);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+}
+
+.doctor-card .specialty {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+  color: rgb(102, 102, 102);
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doctor-card .location {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.doctor-card .location i {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--mainColor);
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.location-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* --------- two-row marquee swipers ---------- */
+
+.row-swiper {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.row-swiper-top,
+.row-swiper-bottom {
+ 
+  display: flex;
+  align-items: center;
+}
+.row-swiper-bottom {
+  margin-top: 4px;
+}
+
+/* responsive  */
+@media (max-width: 768px) {
+  .featured-doctors {
+    height: auto;
+  }
+}
