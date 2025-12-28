@@ -3,19 +3,26 @@
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
+@import '@fontsource/source-sans-pro/400.css';
+@import '@fontsource/source-sans-pro/600.css';
 
-
-
-:root{
+:root {
   --mainColor:rgb(0, 112, 205) ;
-  font-family: SourceSansPro !important;
-  font-family: 'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', sans-serif;
+  --bs-body-font-family: 'Source Sans Pro', sans-serif;
 }
 
 
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif !important ;
+  font-weight: 700 !important ;
+}
+
+
+
 .custom-Container{
-  padding-left: 175px;
+  padding-left: 175px ;
   padding-right: 175px;
   
 }

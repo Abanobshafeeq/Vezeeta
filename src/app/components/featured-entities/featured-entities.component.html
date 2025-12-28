@@ -7,7 +7,6 @@
 
   <swiper-container
     #swiperEl
-    init="false"
     class="entities-swiper"
     pagination="true"
     pagination-clickable="true"
@@ -31,13 +30,11 @@
               <h6>{{ entity.name }}</h6>
 
               <p class="specialties">
-                <i class="bi bi-heart-pulse"></i>
-                {{ entity.specialtiesCount }} Specialities
+                <i class="bi bi-heart-pulse"></i>{{ entity.specialtiesCount }} Specialities
               </p>
 
               <div class="location">
-                <i class="bi bi-geo-alt"></i>
-                <span>{{ entity.location }}</span>
+                <i class="bi bi-geo-alt"></i><span>{{ entity.location }}</span>
               </div>
             </div>
           </div>

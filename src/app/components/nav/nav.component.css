@@ -6,9 +6,16 @@
   
 }
 a{
-  font-size: 13px;
-  font-weight: 400 !important;
-  color: #ffffff;
+  text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    vertical-align: middle;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0.5px 2px 0px;
+    font-weight: 400 !important;
 }
 
 

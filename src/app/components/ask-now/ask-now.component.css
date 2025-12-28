@@ -21,7 +21,6 @@
 
 .card-blue {
   position: relative;
-  
 }
 
 .title-light {
@@ -49,7 +48,15 @@
   line-height: 24px;
   color: rgba(255, 255, 255, 0.92);
 }
-
+.btn {
+  padding: 10px 24px !important;
+  font-size: 16px !important;
+  width: 150px !important;
+  /* height: 40px; */
+  text-align: center;
+  background: white;
+  font-weight: 600 !important;
+}
 .ask-btn,
 .btn-white {
   background: rgb(230, 241, 255);
@@ -58,7 +65,7 @@
   font-size: 14px;
   font-weight: 600;
   border-radius: 8px;
-  width: 20% !important;
+  /* width: 20% !important; */
 }
 
 .btn-white {

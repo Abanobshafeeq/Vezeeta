@@ -31,7 +31,7 @@
 
 .entities-swiper {
   width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 28px;
 }
 
 .entity-card {
@@ -55,7 +55,7 @@
   height: 120px;
   border-radius: 12px;
   overflow: hidden;
-  margin: 0px 16px;
+  margin: 0px auto;
 }
 
 .content {
@@ -104,7 +104,7 @@
 
 .specialties {
   display: flex;
-  gap: 3px;
+  gap: 4px;
   -webkit-box-align: center;
   align-items: center;
   color: rgb(102, 102, 102);
@@ -119,16 +119,25 @@
   vertical-align: middle;
 }
 
+p{
+  margin: 4px 0px;
+}
 .location {
-  font-size: 13px;
-  color: #666;
   display: flex;
+  gap: 4px;
+  -webkit-box-align: center;
   align-items: center;
-  gap: 6px;
+  color: rgb(102, 102, 102);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 .location i {
   color: var(--mainColor);
+  font-size: 14px;
+  vertical-align: middle;
+  
 }
 
 swiper-container::part(pagination) {
@@ -141,8 +150,8 @@ swiper-container::part(pagination) {
 }
 
 swiper-container::part(bullet) {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: #ddd;
   opacity: 1;
   border-radius: 50%;
@@ -150,8 +159,8 @@ swiper-container::part(bullet) {
 
 swiper-container::part(bullet-active) {
   background: #0070cd;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 768px) {
