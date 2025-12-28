@@ -15,66 +15,52 @@
   </div>
 
   <swiper-container
-    class="row-swiper row-swiper-top"
+    class="row-swiper"
     [breakpoints]="swiperBreakpoints"
     loop="true"
     autoplay="true"
     autoplay-delay="1000"
     speed="600"
     slides-per-view="auto"
-    space-between=""
   >
-    <swiper-slide
-      *ngFor="let doctor of row1Doctors"
-      class="doctor-slide"
-    >
-      <div class="doctor-card">
-        <div class="image-wrapper">
-          <span class="rating">
-            <i class="bi bi-star-fill"></i> {{ doctor.rating }}
-          </span>
-          <img [src]="doctor.image" alt="doctor" />
+    <swiper-slide *ngFor="let pair of doctorPairs">
+      <div class="two-rows">
+        <div class="doctor-card" *ngIf="pair[0] as doctor">
+          
+            <div class="image-wrapper">
+              <span class="rating">
+                <i class="bi bi-star-fill"></i> {{ doctor.rating }}
+              </span>
+              <img [src]="doctor.image" alt="doctor" />
+            </div>
+            <h6>{{ doctor.name }}</h6>
+            <p class="specialty">{{ doctor.specialty }}</p>
+            <div class="location">
+              <i class="bi bi-geo-alt"></i>
+              <span class="location-text">
+                {{ doctor.city }}: {{ doctor.area }}
+              </span>
+            </div>
+          
         </div>
-        <h6>{{ doctor.name }}</h6>
-        <p class="specialty">{{ doctor.specialty }}</p>
-        <div class="location">
-          <i class="bi bi-geo-alt"></i>
-          <span class="location-text">
-            {{ doctor.city }}: {{ doctor.area }}
-          </span>
-        </div>
-      </div>
-    </swiper-slide>
-  </swiper-container>
 
-  <swiper-container
-    class="row-swiper row-swiper-bottom"
-    [breakpoints]="swiperBreakpoints"
-    loop="true"
-    autoplay="true"
-    autoplay-delay="1000"
-    speed="600"
-    slides-per-view="auto"
-    space-between=""
-  >
-    <swiper-slide
-      *ngFor="let doctor of row2Doctors"
-      class="doctor-slide"
-    >
-      <div class="doctor-card">
-        <div class="image-wrapper">
-          <span class="rating">
-            <i class="bi bi-star-fill"></i> {{ doctor.rating }}
-          </span>
-          <img [src]="doctor.image" alt="doctor" />
-        </div>
-        <h6>{{ doctor.name }}</h6>
-        <p class="specialty">{{ doctor.specialty }}</p>
-        <div class="location">
-          <i class="bi bi-geo-alt"></i>
-          <span class="location-text">
-            {{ doctor.city }}: {{ doctor.area }}
-          </span>
+        <div class="doctor-card" *ngIf="pair[1] as doctor">
+          
+            <div class="image-wrapper">
+              <span class="rating">
+                <i class="bi bi-star-fill"></i> {{ doctor.rating }}
+              </span>
+              <img [src]="doctor.image" alt="doctor" />
+            </div>
+            <h6>{{ doctor.name }}</h6>
+            <p class="specialty">{{ doctor.specialty }}</p>
+            <div class="location">
+              <i class="bi bi-geo-alt"></i>
+              <span class="location-text">
+                {{ doctor.city }}: {{ doctor.area }}
+              </span>
+            </div>
+          
         </div>
       </div>
     </swiper-slide>
