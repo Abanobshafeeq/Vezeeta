@@ -53,11 +53,13 @@
   color: var(--mainColor);
   border: 1px solid var(--mainColor);
 }
-.tabs::-webkit-scrollbar {
-  display: none;
-}
-/* --------- doctor card ---------- */
 
+/* --------- doctor card ---------- */
+.featured-doctors .swiper {
+  transition: transform 400ms ease-in-out;
+  overflow: unset;
+  transform: translate3d(-150px , 0px, 0px);
+}
 .doctor-card {
   min-height: 204px;
   min-width: 128px;
@@ -169,7 +171,6 @@
 
 .row-swiper-top,
 .row-swiper-bottom {
- 
   display: flex;
   align-items: center;
 }
@@ -181,7 +182,38 @@
   grid-template-rows: 1fr 1fr;
   gap: 6px;
 }
+.doctors-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
+  scroll-snap-type: x mandatory; /* اختياري */
+  -webkit-overflow-scrolling: touch;
+}
+
+.pair-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start; /* اختياري */
+}
+
+.two-rows {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+}
+
+
+
+.doctors-list::-webkit-scrollbar {
+  display: none;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
+}
 /* responsive  */
 @media (max-width: 768px) {
   .featured-doctors {

@@ -1,6 +1,5 @@
 .promo-section {
   width: 100%;
-  
 }
 
 .promo-header {
@@ -12,54 +11,40 @@
 
 .promo-title {
   margin: 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 32px !important;
+  font-weight: 700 !important;
   color: #666666;
+  padding: 0;
 }
 
 .promo-all {
   color: var(--mainColor);
   font-weight: 700;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .promo-all:hover {
   text-decoration: underline;
 }
 
-.tri {
-  position: absolute;
-  top: 10px;
-  border-width: 0px 0px 0px 5px;
-  left: 10px;
-  padding: 2px 5px 2px 3px;
-  z-index: 2;
-  height: fit-content;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 18px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(224, 32, 32);
-  border-color: rgb(174, 13, 13);
-  border-style: solid;
-
-}
+/*  */
 
 .promo-wrap {
   position: relative;
-  overflow: hidden;
-  padding: 0 44px;
+  /* overflow: hidden; */
+  padding: 0 0px;
 }
 
 .promo-track {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
+  
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overflow: hidden !important;
 }
 
 .promo-track::-webkit-scrollbar {
@@ -99,13 +84,19 @@ i {
 .badge {
   position: absolute;
   top: 10px;
+  border-width: 0px 0px 0px 5px;
   left: 10px;
-  background: #d93025;
-  color: #fff;
+  padding: 2px 5px 2px 3px;
+  z-index: 2;
+  height: fit-content;
   font-size: 12px;
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 4px;
+  font-weight: bold;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(224, 32, 32);
+  border-color: rgb(174, 13, 13);
+  border-style: solid;
+  border-radius: 0;
 }
 
 .body {
@@ -115,7 +106,7 @@ i {
 .card-title {
   font-size: 16px;
   font-weight: 700;
-  color: #6b6b6b;
+  color: rgb(111, 112, 114);
   margin-bottom: 6px;
 }
 
@@ -127,28 +118,28 @@ i {
 }
 
 .old {
-  color: #9a9a9a;
+  color: rgb(111, 112, 114);
   text-decoration: line-through;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .new {
   color: #1e73be;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .sub2 {
-  font-size: 13px;
-  color: #8a8a8a;
+  font-size: 14px;
+  color: rgb(111, 112, 114);
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: fit-content;
+  height: fit-content;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #fff;
   border-radius: 6px;
@@ -158,21 +149,23 @@ i {
   z-index: 2;
 }
 
-.nav-btn{
-  width: 34px;
-  height: 34px;
+.nav-btn {
+  width: fit-content;
+  height: fit-content;
+  /* padding: 10px; */
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
   cursor: pointer;
-  padding: 0;
+  padding: 10px;
+  /* padding-right: 8px; */
 }
 
-.chevron{
+.chevron {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -181,20 +174,22 @@ i {
   z-index: 5;
 }
 
-.chevron-left{
+.chevron-left {
   transform: rotate(45deg);
+  
 }
 
-.chevron-right{
+.chevron-right {
   transform: rotate(-135deg);
 }
 
-
 .nav-btn.left {
-  left: 0;
+  left: -40px;
+  padding-right: 7px;
 }
 .nav-btn.right {
-  right: 0;
+  right: -40px;
+  padding-left: 7px;
 }
 
 @media (max-width: 1200px) {

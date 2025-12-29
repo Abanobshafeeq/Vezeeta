@@ -3,43 +3,43 @@ import type { PromoSlideItem } from '../components/promo-slider/promo-slider.com
 
 export const Book_Specialties: PromoSlideItem[] = [
   {
-    imageSrc: '../../assets/images/bookSpecialties/1.jpg',
+    imageSrc: 'assets/images/bookSpecialties/1.jpg',
     title: 'Teeth Cleaning',
     link: '',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/2.jpg',
+    imageSrc: 'assets/images/bookSpecialties/2.jpg',
     title: 'Teeth Cleaning',
     link: '',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/3.jpg',
+    imageSrc: 'assets/images/bookSpecialties/3.jpg',
     title: 'Teeth Cleaning',
     link: '',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/4.jpg',
+    imageSrc: 'assets/images/bookSpecialties/4.jpg',
     title: 'Teeth Cleaning',
 
     link: '',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/5.jpg',
+    imageSrc: 'assets/images/bookSpecialties/5.jpg',
     title: 'Teeth Cleaning',
     link: '/',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/6.jpg',
+    imageSrc: 'assets/images/bookSpecialties/6.jpg',
     title: 'Teeth Cleaning',
     link: '/',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/7.jpg',
+    imageSrc: 'assets/images/bookSpecialties/7.jpg',
     title: 'Teeth Cleaning',
     link: '/',
   },
   {
-    imageSrc: '../../assets/images/bookSpecialties/8.jpg',
+    imageSrc: 'assets/images/bookSpecialties/8.jpg',
     title: 'Teeth Cleaning',
     link: '/',
   },

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { DOCTORS, SPECIALTIES } from '../../data/doctors.data';
 import { Doctor } from '../../models/doctor';
-
 @Component({
   selector: 'app-featured-doctors',
   standalone: true,

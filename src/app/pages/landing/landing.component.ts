@@ -20,6 +20,7 @@ import { Book_Specialties } from '../../data/bookSpecialties.data';
 import { VezeetaDownloadComponent } from '../../components/vezeeta-download/vezeeta-download.component';
 import { TopListsComponent } from "../../components/top-lists/top-lists.component";
 import { FeaturedEntitiesComponent } from "../../components/featured-entities/featured-entities.component";
+import { FeaturedDoctorUlComponent } from "../../featured-doctor-ul/featured-doctor-ul.component";
 
 // import { VezeetaDownloadComponent } from "../../components/vezeeta-download/vezeeta-download.component";
 
@@ -37,7 +38,8 @@ import { FeaturedEntitiesComponent } from "../../components/featured-entities/fe
     PromoSliderComponent,
     VezeetaDownloadComponent,
     TopListsComponent,
-    FeaturedEntitiesComponent
+    FeaturedEntitiesComponent,
+    FeaturedDoctorUlComponent
 ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',

@@ -33,9 +33,8 @@ h5 {
 }
 
 .vezeeta-footer .store-btn {
-  width: 150px;
-  transition: 0.25s ease;
-  cursor: pointer;
+     overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 .vezeeta-footer .store-btn:hover {
@@ -54,12 +53,16 @@ h5 {
   opacity: 0.75;
 }
 
+.text-center img {
+}
+
 .social-box {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 767px) {
-  .col-6 {
-    margin-top: 20px;
+@media screen and (max-width: 720px) {
+  .custom-Container{
+    padding-left: 15px !important;
   }
+  
 }

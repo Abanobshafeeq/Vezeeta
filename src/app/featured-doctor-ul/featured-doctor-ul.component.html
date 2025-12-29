@@ -14,16 +14,8 @@
     </button>
   </div>
 
-  <swiper-container
-    class="row-swiper"
-    [breakpoints]="swiperBreakpoints"
-    autoplay="true"
-    loop="true"
-    autoplay-delay="1000"
-    speed="600"
-    slides-per-view="auto"
-  >
-    <swiper-slide *ngFor="let pair of doctorPairs">
+  <ul class="doctors-list" role="list">
+    <li class="pair-item" *ngFor="let pair of doctorPairs; trackBy: trackByIndex">
       <div class="two-rows">
         <div class="doctor-card" *ngIf="pair[0] as doctor">
           <div class="image-wrapper">
@@ -32,13 +24,13 @@
             </span>
             <img [src]="doctor.image" alt="doctor" />
           </div>
+
           <h6>{{ doctor.name }}</h6>
           <p class="specialty">{{ doctor.specialty }}</p>
+
           <div class="location">
             <i class="bi bi-geo-alt"></i>
-            <span class="location-text">
-              {{ doctor.city }}: {{ doctor.area }}
-            </span>
+            <span class="location-text">{{ doctor.city }}: {{ doctor.area }}</span>
           </div>
         </div>
 
@@ -49,16 +41,16 @@
             </span>
             <img [src]="doctor.image" alt="doctor" />
           </div>
+
           <h6>{{ doctor.name }}</h6>
           <p class="specialty">{{ doctor.specialty }}</p>
+
           <div class="location">
             <i class="bi bi-geo-alt"></i>
-            <span class="location-text">
-              {{ doctor.city }}: {{ doctor.area }}
-            </span>
+            <span class="location-text">{{ doctor.city }}: {{ doctor.area }}</span>
           </div>
         </div>
       </div>
-    </swiper-slide>
-  </swiper-container>
+    </li>
+  </ul>
 </div>

@@ -3,7 +3,7 @@ import type { PromoSlideItem } from '../components/promo-slider/promo-slider.com
 
 export const TOP_OFFERS: PromoSlideItem[] = [
   {
-    imageSrc: '../../../assets/images/offers/teath.jpg',
+    imageSrc: 'assets/images/offers/teath.jpg',
     title: 'Teeth Cleaning',
     oldPrice: '1500 EGP',
     newPrice: '900 EGP',
@@ -12,7 +12,7 @@ export const TOP_OFFERS: PromoSlideItem[] = [
     link: '/',
   },
   {
-    imageSrc: '../../../assets/images/offers/facial.png',
+    imageSrc: 'assets/images/offers/facial.png',
     title: 'Teeth Cleaning',
     oldPrice: '1500 EGP',
     newPrice: '900 EGP',
@@ -21,7 +21,7 @@ export const TOP_OFFERS: PromoSlideItem[] = [
     link: '/',
   },
   {
-    imageSrc: '../../../assets/images/offers/Metal.jpg',
+    imageSrc: 'assets/images/offers/Metal.jpg',
     title: 'Teeth Cleaning',
     oldPrice: '1500 EGP',
     newPrice: '900 EGP',
@@ -30,7 +30,7 @@ export const TOP_OFFERS: PromoSlideItem[] = [
     link: '/',
   },
   {
-    imageSrc: '../../../assets/images/offers/Face.jpg',
+    imageSrc: 'assets/images/offers/Face.jpg',
     title: 'Teeth Cleaning',
     oldPrice: '1500 EGP',
     newPrice: '900 EGP',
@@ -39,7 +39,7 @@ export const TOP_OFFERS: PromoSlideItem[] = [
     link: '/',
   },
   {
-    imageSrc: '../../../assets/images/offers/laser.jpg',
+    imageSrc: 'assets/images/offers/laser.jpg',
     title: 'Teeth Cleaning',
     oldPrice: '1500 EGP',
     newPrice: '900 EGP',
@@ -48,7 +48,7 @@ export const TOP_OFFERS: PromoSlideItem[] = [
     link: '/',
   },
   {
-    imageSrc: '../../../assets/images/offers/weight.jpg',
+    imageSrc: 'assets/images/offers/weight.jpg',
     title: 'Teeth Cleaning',
     oldPrice: '1500 EGP',
     newPrice: '900 EGP',
