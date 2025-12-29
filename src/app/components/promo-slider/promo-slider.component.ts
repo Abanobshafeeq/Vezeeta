@@ -40,7 +40,7 @@ export class PromoSliderComponent implements AfterViewInit {
   private step = 0;
   private readonly itemsPerClick = 4;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
 
   get showRightArrow(): boolean {
     if (this.hideArrow) return false;
@@ -54,7 +54,7 @@ export class PromoSliderComponent implements AfterViewInit {
     const card = track.querySelector('.promo-card') as HTMLElement;
     if (!card) return;
 
-    const gap = parseFloat(getComputedStyle(track).gap) || 16;
+    const gap = Number.parseFloat(getComputedStyle(track).gap) || 16;
     this.step = card.offsetWidth + gap;
   }
 
