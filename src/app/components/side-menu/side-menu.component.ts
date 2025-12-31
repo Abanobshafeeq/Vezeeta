@@ -6,21 +6,21 @@ import { CountryService } from '../../services/country.service';
   standalone: true,
   imports: [],
   templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.css'
+  styleUrl: './side-menu.component.css',
 })
 export class SideMenuComponent implements OnInit {
-    menuOpen = false;
+  menuOpen = false;
 
   selectedCountry = '';
   selectedFlag = '';
 
-  dropdownOpen = false; 
+  dropdownOpen = false;
 
   constructor(private countryService: CountryService) {}
 
   ngOnInit() {
-    this.countryService.selectedCountry$.subscribe(c => this.selectedCountry = c);
-    this.countryService.selectedFlag$.subscribe(f => this.selectedFlag = f);
+    this.countryService.selectedCountry$.subscribe((c) => (this.selectedCountry = c));
+    this.countryService.selectedFlag$.subscribe((f) => (this.selectedFlag = f));
   }
 
   toggleMenu() {
@@ -33,9 +33,9 @@ export class SideMenuComponent implements OnInit {
 
   selectCountry(country: string, flag: string) {
     this.countryService.changeCountry(country, flag);
-    this.dropdownOpen = false; 
+    this.dropdownOpen = false;
   }
   changeCountry(country: string, flag: string) {
-  this.countryService.changeCountry(country, flag);
-}
+    this.countryService.changeCountry(country, flag);
+  }
 }

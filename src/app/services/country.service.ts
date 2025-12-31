@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core'; // to make the service injectable 3lshan nst5dmha fii ay components
+import { BehaviorSubject } from 'rxjs'; // store data and emit new values to subscribers
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // service available throughout the app
 })
 export class CountryService {
 

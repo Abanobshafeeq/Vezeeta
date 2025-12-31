@@ -15,13 +15,13 @@
   </div>
 
   <swiper-container
+    #swiperEl
     class="row-swiper"
-    [breakpoints]="swiperBreakpoints"
+  
     autoplay="true"
     loop="true"
-    autoplay-delay="1000"
-    speed="600"
-    slides-per-view="auto"
+
+    
   >
     <swiper-slide *ngFor="let pair of doctorPairs">
       <div class="two-rows">

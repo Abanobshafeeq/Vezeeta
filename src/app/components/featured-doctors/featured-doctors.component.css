@@ -56,6 +56,8 @@
 .tabs::-webkit-scrollbar {
   display: none;
 }
+
+
 /* --------- doctor card ---------- */
 
 .doctor-card {
@@ -100,7 +102,7 @@
   border-radius: 4px;
   font-size: 12px;
   font-weight: 600;
-  display: inline-flex;
+  /* display: inline-flex; */
   align-items: center;
   gap: 4px;
   min-width: 40px;
@@ -120,7 +122,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-shrink: 1;
 }
 
 .doctor-card .specialty {
@@ -147,7 +148,6 @@
 .doctor-card .location i {
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
   color: var(--mainColor);
   margin-right: 4px;
   margin-bottom: 4px;
@@ -167,15 +167,7 @@
   margin-bottom: 6px;
 }
 
-.row-swiper-top,
-.row-swiper-bottom {
- 
-  display: flex;
-  align-items: center;
-}
-.row-swiper-bottom {
-  margin-top: 4px;
-}
+
 .two-rows {
   display: grid;
   grid-template-rows: 1fr 1fr;

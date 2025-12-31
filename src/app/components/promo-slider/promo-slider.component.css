@@ -28,7 +28,7 @@
   text-decoration: underline;
 }
 
-/*  */
+
 
 .promo-wrap {
   position: relative;
@@ -124,7 +124,7 @@ i {
 }
 
 .new {
-  color: #1e73be;
+  color: var(--mainColor);
   font-weight: 700;
   font-size: 16px;
 }

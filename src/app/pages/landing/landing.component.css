@@ -21,7 +21,7 @@ h1 {
 h2 {
   font-size: 2.1em;
   font-weight: normal;
-  margin: 0px;
+  margin: 0px 0px 11px;
   color: rgb(111, 112, 114);
 }
 
@@ -193,7 +193,7 @@ h2 span {
 
 @media only screen and (min-width: 771px) and (max-width: 1023px) {
   .content-header {
-    font-size: 8px;
+    font-size: 9px;
   }
   .doctor-section {
     height: 75vh;

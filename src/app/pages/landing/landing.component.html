@@ -1,8 +1,7 @@
 <section class="doctor-section custom-Container">
   <div class="custom-Container">
-    <!-- padding-top: 55px; -->
     <div class="row">
-      <div class="container text-start content-header">
+      <div class="col-12 text-start content-header">
         <h1>Better Healthcare  for a Better Life</h1>
         <h2>
           Book online or call
@@ -13,12 +12,12 @@
     </div>
 
     <div class="row">
-      <div class="app-booking-header">
+      <div class="app-booking-header col-12">
         <app-booking-header></app-booking-header>
       </div>
     </div>
     <div class="row">
-      <div class="app-booking-header-responsive">
+      <div class="app-booking-header-responsive col-12">
         <app-header-doctors-responsive></app-header-doctors-responsive>
         <div class="calling">
           <p>Or Call <span>16676</span></p>
@@ -27,7 +26,7 @@
     </div>
   </div>
 
-  <div class="scroll-down" (click)="scrollToContent()">
+  <div class="scroll-down"  (click)="scrollToContent()">
     <i class="bi bi-chevron-down"></i>
   </div>
 </section>
@@ -50,11 +49,11 @@
         <i class="fa-solid fa-chevron-right btn-arrow"></i>
       </div>
     </div>
-    <div class="featured-doctor">
+    <!-- <div class="featured-doctor">
       <app-featured-doctors ngSkipHydration></app-featured-doctors>
-    </div>
+    </div> -->
     <div class="featured-doctor">
-      <app-featured-doctor-ul></app-featured-doctor-ul>
+      <app-featured-doctor-ul ngSkipHydration></app-featured-doctor-ul>
     </div>
     <div class="featured-doctor">
       <app-featured-entities ngSkipHydration></app-featured-entities>

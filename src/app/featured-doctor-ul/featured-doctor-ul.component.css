@@ -164,24 +164,6 @@
 
 /* --------- two-row marquee swipers ---------- */
 
-.row-swiper {
-  width: 100%;
-  margin-bottom: 6px;
-}
-
-.row-swiper-top,
-.row-swiper-bottom {
-  display: flex;
-  align-items: center;
-}
-.row-swiper-bottom {
-  margin-top: 4px;
-}
-.two-rows {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 6px;
-}
 .doctors-list {
   display: flex;
   gap: 12px;
@@ -191,13 +173,13 @@
   margin: 0;
   list-style: none;
 
-  scroll-snap-type: x mandatory; /* اختياري */
+  scroll-snap-type: x mandatory; 
   -webkit-overflow-scrolling: touch;
 }
 
 .pair-item {
   flex: 0 0 auto;
-  scroll-snap-align: start; /* اختياري */
+  scroll-snap-align: start;
 }
 
 .two-rows {

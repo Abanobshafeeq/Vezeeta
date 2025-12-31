@@ -14,7 +14,7 @@
     </button>
   </div>
 
-  <ul class="doctors-list" role="list">
+  <ul class="doctors-list">
     <li class="pair-item" *ngFor="let pair of doctorPairs; trackBy: trackByIndex">
       <div class="two-rows">
         <div class="doctor-card" *ngIf="pair[0] as doctor">

@@ -5,7 +5,7 @@
     <!-- Logo -->
     <a class="navbar-brand d-flex " href="#">
       <img
-        src="../../../assets/images/logovezeta.jpg"
+        src="assets/images/logovezeta.jpg"
         alt="Logo"
         style="width : 172px"
       />
@@ -46,15 +46,44 @@
           class="dropdown-toggle text-white text-decoration-none fw-semibold d-flex align-items-center gap-2"
           data-bs-toggle="dropdown"
         >
-          <img [src]="selectedFlag" class="flag-icon" />
+          <img [src]="selectedFlag" class="flag-icon" alt="" />
           {{ selectedCountry }}
         </a>
 
+       
         <ul class="dropdown-menu dropdown-menu-end">
           <li>
-            <a class="dropdown-item d-flex gap-2">
-              <img src="../../../assets/images/e.png" class="flag-icon" />
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              (click)="changeCountry('Egypt', '../../../assets/images/e.png')"
+            >
+              <img alt="" src="assets/images/e.png" class="flag-icon" />
               Egypt
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              (click)="
+                changeCountry('Saudi Arabia', '../../../assets/images/s.png')
+              "
+            >
+              <img src="../../../assets/images/s.png" class="flag-icon" alt="" />
+              Saudi Arabia
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center gap-2"
+              href="#"
+              (click)="changeCountry('Jordan', '../../../assets/images/j.png')"
+            >
+              <img src="assets/images/j.png" class="flag-icon" alt="" />
+              Jordan
             </a>
           </li>
         </ul>

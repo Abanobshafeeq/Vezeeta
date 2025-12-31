@@ -17,7 +17,6 @@
   pointer-events: all;
 }
 
-/* SIDE MENU */
 .mobile-side-menu {
   position: fixed;
   top: 0;
@@ -37,7 +36,6 @@
   right: 0;
 }
 
-/* CLOSE BUTTON */
 .close-btn {
   font-size: 22px;
   text-align: right;
@@ -45,7 +43,6 @@
   cursor: pointer;
 }
 
-/* MENU ITEMS */
 .menu-item {
   padding: 18px 20px;
   font-size: 17px;
@@ -68,11 +65,10 @@
   color: white;
 }
 
-/* الخط الأحمر */
 .red-line {
   position: absolute;
-  left: 20px;
-  bottom: 10px;
+  left: 25px;
+  bottom: 17px;
   width: 12px;
   height: 2px;
   background: red;
@@ -82,17 +78,15 @@
   margin-top: auto;
   padding: 20px;
   display: flex;
-  justify-content: space-between; /* مهم */
+  justify-content: space-between;
   align-items: center;
 }
 
-/* Arabic text on left */
 .lang-text {
   font-size: 16px;
   font-weight: 500;
 }
 
-/* Country selector on right */
 .country-box {
   display: flex;
   align-items: center;
@@ -110,7 +104,6 @@
   margin-top: 2px;
 }
 
-/* Dropdown */
 .dropdown {
   margin-top: 10px;
   border-radius: 6px;

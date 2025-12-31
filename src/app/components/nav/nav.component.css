@@ -18,7 +18,9 @@ a{
     font-weight: 400 !important;
 }
 
-
+.dropdown-menu a{
+  color: black;
+}
 /* Responsive spacing */
 @media screen and  (max-width: 1246px) and (min-width : 736px) {
   .custom-Container{

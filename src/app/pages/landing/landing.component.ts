@@ -22,7 +22,6 @@ import { TopListsComponent } from "../../components/top-lists/top-lists.componen
 import { FeaturedEntitiesComponent } from "../../components/featured-entities/featured-entities.component";
 import { FeaturedDoctorUlComponent } from "../../featured-doctor-ul/featured-doctor-ul.component";
 
-// import { VezeetaDownloadComponent } from "../../components/vezeeta-download/vezeeta-download.component";
 
 @Component({
   selector: 'app-landing',
@@ -54,7 +53,7 @@ export class LandingComponent {
 
   askCard: PromoCardData = {
     variant: 'light',
-    iconSrc: '../../../assets/images/ask.svg',
+    iconSrc: 'assets/images/ask.svg',
     showIconMobileOnly: true,
     title: 'Have a Medical Question?',
     description:
@@ -65,13 +64,13 @@ export class LandingComponent {
 
   pharmacyCard: PromoCardData = {
     variant: 'blue',
-    iconSrc: '../../../assets/images/Pharmacy.png',
+    iconSrc: 'assets/images/Pharmacy.png',
     showIconMobileOnly: true,
     title: 'Pharmacy',
     description: 'Get your medicine and all your pharmacy needs.',
     buttonText: 'Place order',
     buttonLink: '',
-    bgImageSrc: '../../../assets/images/pharmcyBG.png',
+    bgImageSrc: 'assets/images/pharmcyBG.png',
   };
 
    topOffers: PromoSlideItem[] = TOP_OFFERS;

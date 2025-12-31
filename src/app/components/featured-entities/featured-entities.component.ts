@@ -1,6 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit, Inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from '@angular/core';
 import { FEATURED_ENTITIES, Entity } from '../../data/entitiy.data';
 
 @Component({
@@ -16,7 +15,7 @@ export class FeaturedEntitiesComponent implements AfterViewInit {
 
   @ViewChild('swiperEl') swiperEl!: ElementRef;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
 
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;   

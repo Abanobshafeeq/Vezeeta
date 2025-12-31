@@ -162,6 +162,7 @@ export class HeaderDoctorsComponent {
     );
     }, 2000);
   }
+  
   constructor(private el: ElementRef) {}
 
   @HostListener('document:click', ['$event'])
