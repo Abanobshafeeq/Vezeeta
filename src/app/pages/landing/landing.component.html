@@ -1,8 +1,10 @@
-<section class="doctor-section custom-Container">
+<section class="doctor-section custom-Container" 
+         appScrollTracker #hero="scrollTracker" 
+         [class]="hero.isVisible() ? 'animate__animated animate__fadeInUp' : 'wait-for-scroll'">
   <div class="custom-Container">
     <div class="row">
       <div class="col-12 text-start content-header">
-        <h1>Better Healthcare  for a Better Life</h1>
+        <h1>Better Healthcare for a Better Life</h1>
         <h2>
           Book online or call
           <i class="bi bi-telephone-fill text-danger"></i>
@@ -26,93 +28,113 @@
     </div>
   </div>
 
-  <div class="scroll-down"  (click)="scrollToContent()">
+  <div class="scroll-down" (click)="scrollToContent()">
     <i class="bi bi-chevron-down"></i>
   </div>
 </section>
 
 <section class="content-gray">
   <div class="content-container container">
-    <div class="shamel-banner">
+    
+    <div class="shamel-banner" 
+         appScrollTracker #shamel="scrollTracker" 
+         [class]="shamel.isVisible() ? 'animate__animated animate__zoomIn' : 'wait-for-scroll'">
       <div class="banner-content">
         <div class="text">
-          <img
-            src="assets/images/shamel.png"
-            alt="shamel"
-            class="img"
-          />
+          <img src="assets/images/shamel.png" alt="shamel" class="img" />
           <p>Save up to 80% on all medical services</p>
         </div>
-
         <button class="details-btn">See Details</button>
-
         <i class="fa-solid fa-chevron-right btn-arrow"></i>
       </div>
     </div>
-    <!-- <div class="featured-doctor">
-      <app-featured-doctors ngSkipHydration></app-featured-doctors>
-    </div> -->
-    <div class="featured-doctor">
+
+    <div class="featured-doctor" 
+         appScrollTracker #featDoc="scrollTracker" 
+         [class]="featDoc.isVisible() ? 'animate__animated animate__fadeInRight' : 'wait-for-scroll'">
       <app-featured-doctor-ul ngSkipHydration></app-featured-doctor-ul>
     </div>
-    <div class="featured-doctor">
+
+    <div class="featured-doctor" 
+         appScrollTracker #featEnt="scrollTracker" 
+         [class]="featEnt.isVisible() ? 'animate__animated animate__fadeInRight' : 'wait-for-scroll'">
       <app-featured-entities ngSkipHydration></app-featured-entities>
     </div>
-    <div class="book-now">
-      <a routerLink="/home"
-        ><img
-          src="assets/images/book-now.png"
-          alt=""
-          class="book-now-image"
-      /></a>
+
+    <div class="book-now" 
+         appScrollTracker #bookBtn="scrollTracker" 
+         [class]="bookBtn.isVisible() ? 'animate__animated animate__zoomIn' : 'wait-for-scroll'">
+      <a routerLink="/home">
+        <img src="assets/images/book-now.png" alt="" class="book-now-image" />
+      </a>
     </div>
-    <div class="north">
+
+    <div class="north" 
+         appScrollTracker #north="scrollTracker" 
+         [class]="north.isVisible() ? 'animate__animated animate__fadeInLeft' : 'wait-for-scroll'">
       <app-north></app-north>
     </div>
 
-    <div class="ask-now">
+    <div class="ask-now" 
+         appScrollTracker #ask1="scrollTracker" 
+         [class]="ask1.isVisible() ? 'animate__animated animate__fadeInLeft' : 'wait-for-scroll'">
       <app-ask-now [data]="askCard"></app-ask-now>
     </div>
-    <div class="ask-now">
+
+    <div class="ask-now" 
+         appScrollTracker #ask2="scrollTracker" 
+         [class]="ask2.isVisible() ? 'animate__animated animate__fadeInRight' : 'wait-for-scroll'">
       <app-ask-now [data]="pharmacyCard"></app-ask-now>
     </div>
-    <div class="service-card">
+
+    <div class="service-card" 
+         appScrollTracker #srv="scrollTracker" 
+         [class]="srv.isVisible() ? 'animate__animated animate__fadeInUp' : 'wait-for-scroll'">
       <app-service-card></app-service-card>
     </div>
+
   </div>
 </section>
 
-<section class="content-white">
+<section class="content-white" 
+         appScrollTracker #secOffers="scrollTracker" 
+         [class]="secOffers.isVisible() ? 'animate__animated animate__fadeInUp' : 'wait-for-scroll'">
   <div class="content-container container">
-    <app-promo-slider
-      sectionTitle="Choose from top offers"
-      sectionLinkText="All Offers"
+    <app-promo-slider 
+      sectionTitle="Choose from top offers" 
+      sectionLinkText="All Offers" 
       sectionLinkHref="/offers"
-      [items]="topOffers"
-    ></app-promo-slider>
+      [items]="topOffers">
+    </app-promo-slider>
   </div>
 </section>
 
-<section class="content-gray">
+<section class="content-gray" 
+         appScrollTracker #secSpecs="scrollTracker" 
+         [class]="secSpecs.isVisible() ? 'animate__animated animate__fadeInUp' : 'wait-for-scroll'">
   <div class="content-container container">
-    <app-promo-slider
-      sectionTitle="Book from top specialties"
-      sectionLinkText=""
+    <app-promo-slider 
+      sectionTitle="Book from top specialties" 
+      sectionLinkText="" 
       sectionLinkHref="/"
-      [items]="bookSpecialties"
-      [hideArrow]="true"
-    ></app-promo-slider>
+      [items]="bookSpecialties" 
+      [hideArrow]="true">
+    </app-promo-slider>
   </div>
 </section>
 
-<section class="content-white">
-   <div class="content-container container ">
+<section class="content-white" 
+         appScrollTracker #secDl="scrollTracker" 
+         [class]="secDl.isVisible() ? 'animate__animated animate__fadeInLeft' : 'wait-for-scroll'">
+  <div class="content-container container">
     <app-vezeeta-download></app-vezeeta-download>
-   </div>
+  </div>
 </section>
 
-<section class="content-gray">
-   <div class="content-container pb-lg-5 ">
+<section class="content-gray" 
+         appScrollTracker #secLists="scrollTracker" 
+         [class]="secLists.isVisible() ? 'animate__animated animate__fadeInUp' : 'wait-for-scroll'">
+  <div class="content-container pb-lg-5">
     <app-top-lists></app-top-lists>
-   </div>
+  </div>
 </section>

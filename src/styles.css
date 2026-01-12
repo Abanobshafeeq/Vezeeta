@@ -19,7 +19,16 @@ body {
   font-weight: 700 !important ;
 }
 
+/* src/app/landing/landing.component.css */
 
+.wait-for-scroll {
+  opacity: 0; /* Hidden initially */
+}
+
+/* Optional: Overwrite animation duration if needed */
+.animate__animated {
+  --animate-duration: 800ms;
+}
 
 .custom-Container{
   padding-left: 175px ;

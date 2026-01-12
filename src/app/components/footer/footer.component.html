@@ -1,4 +1,5 @@
-<footer class="bg-primary text-white pt-5 pb-4 vezeeta-footer custom-Container">
+<footer class="bg-primary text-white pt-5 pb-4 vezeeta-footer custom-Container" appScrollTracker #footer="scrollTracker" 
+        [class]="footer.isVisible() ? 'animate__animated animate__fadeInUp' : 'wait-for-scroll'">
   <div class="">
     <div class="row">
 
